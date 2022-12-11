@@ -1,6 +1,6 @@
 local Path = require("plenary.path")
-local config_path = vim.fn.stdpath("config")
-local user_config = string.format("%s/keep-it-secret.json", config_path)
+local data_path = vim.fn.stdpath("data")
+local user_config = string.format("%s/keep-it-secret.json", data_path)
 
 local M = {
 	wildcards = { ".*(.env)$", ".*(.secret)$" },
