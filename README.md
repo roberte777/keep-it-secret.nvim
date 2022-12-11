@@ -33,7 +33,7 @@ require("keep-it-secret").setup({
 	enabled = false
 })
 ```
-Sample key-bindings, you do need to set this up:
+Sample key-bindings, you do need to set this up because ***I did not provide default keybinds***:
 ```lua 
 vim.api.nvim_set_keymap(
 	"n",
