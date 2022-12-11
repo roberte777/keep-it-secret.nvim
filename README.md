@@ -1,6 +1,6 @@
 # keep-it-secret.nvim
 
-![meme](https://giphy.com/gifs/oskouioskoui-lotr-gifscapade-3oFyCYNrra8qo1Cv8Q)
+![meme](https://media1.giphy.com/media/3oFyCYNrra8qo1Cv8Q/giphy.gif?cid=ecf05e47c6azdr3xbb0zgq45l0ywfygztarh3d5xv3oufvci&rid=giphy.gif&ct=g)
 
 ## What is Keep it Secret?
 
