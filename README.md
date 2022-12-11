@@ -3,8 +3,6 @@
   <img src="https://media1.giphy.com/media/3oFyCYNrra8qo1Cv8Q/giphy.gif?cid=ecf05e47c6azdr3xbb0zgq45l0ywfygztarh3d5xv3oufvci&rid=giphy.gif&ct=g">
 </p>
 
-![meme](https://media1.giphy.com/media/3oFyCYNrra8qo1Cv8Q/giphy.gif?cid=ecf05e47c6azdr3xbb0zgq45l0ywfygztarh3d5xv3oufvci&rid=giphy.gif&ct=g)
-
 ## What is Keep it Secret?
 
 A plugin designed to keep your secrets safe! Useful for content creators or
