@@ -1,6 +1,6 @@
 # keep-it-secret.nvim
 <p align="center">
-  <img width="600" height="200" src="https://media1.giphy.com/media/3oFyCYNrra8qo1Cv8Q/giphy.gif?cid=ecf05e47c6azdr3xbb0zgq45l0ywfygztarh3d5xv3oufvci&rid=giphy.gif&ct=g">
+  <img src="https://media1.giphy.com/media/3oFyCYNrra8qo1Cv8Q/giphy.gif?cid=ecf05e47c6azdr3xbb0zgq45l0ywfygztarh3d5xv3oufvci&rid=giphy.gif&ct=g">
 </p>
 
 ![meme](https://media1.giphy.com/media/3oFyCYNrra8qo1Cv8Q/giphy.gif?cid=ecf05e47c6azdr3xbb0zgq45l0ywfygztarh3d5xv3oufvci&rid=giphy.gif&ct=g)
