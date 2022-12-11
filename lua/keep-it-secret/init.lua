@@ -8,20 +8,24 @@ function M.toggle()
 	enabled = not enabled
 end
 
-function M.show_warning_if_needed(filename)
+function M.show_warning_if_needed()
 	if not enabled then
 		return
 	end
 
-	local wildcards = { "*.env", "*.secret" }
+	local wildcards = { ".*.env", ".*.secret" }
+	local filename = vim.fn.expand("%:t")
 
 	-- Check if the filename matches any of the configured wildcards
 	for _, wildcard in ipairs(wildcards) do
-		if vim.fn.match(filename, wildcard) then
+		if string.match(filename, wildcard) then
 			-- Show the warning message
-			vim.api.nvim_command(
-				"echo 'Warning! You are about to show a file that could contain secrets. Would you like to continue?'"
+			local answer = vim.fn.input(
+				"Warning! You are about to show a file that could contain secrets. Would you like to continue? [y/n]"
 			)
+			if answer:lower() ~= "y" then -- if the user doesn't want to open the file, close the buffer
+				vim.api.nvim_command("bd")
+			end
 			break
 		end
 	end
@@ -31,12 +35,4 @@ function M.is_enabled()
 	print(enabled)
 end
 
-function M.register_buffer_attach_callback()
-	local options = {
-		on_file_opened = M.show_warning_if_needed,
-	}
-	vim.api.nvim_buf_attach(0, options)
-end
-
-M.register_buffer_attach_callback()
 return M
