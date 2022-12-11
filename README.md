@@ -15,3 +15,28 @@ you enter a file you have specified usually contains your project secrets.
 ## Documention
 
 See `:help keep-it-secret.nvim`
+
+## Setup
+Below is a sample setup with the default configs. If you do not wish to change the default configs, not setup call is required
+
+```lua
+	use("roberte777/keep-it-secret.nvimli", {
+		config = function()
+			require("keep-it-secret").setup({
+       wildcards = { ".*(.env)$", ".*(.secret)$" },
+       enabled = false
+      })
+		end,
+	})
+  ```
+  Sample key-bindings:
+  ```lua 
+          vim.api.nvim_set_keymap(
+                "n",
+                "<leader>ks",
+                ":lua require('keep-it-secret').toggle()<CR>",
+                { noremap = true, silent = true }
+        )
+```
+
+
