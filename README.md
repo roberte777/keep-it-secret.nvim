@@ -2,7 +2,7 @@
 
 Keep it Secret
 
-![demo](images/demo)
+![demo](images/demo.png)
 
 A plugin designed to keep your secrets safe! Useful for content creators or
 anyone who finds themselves often sharing their screens to people who could be
