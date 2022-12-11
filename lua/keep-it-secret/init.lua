@@ -1,6 +1,6 @@
 local M = {
 	wildcards = { ".*(.env)$", ".*(.secret)$" },
-	enabled = true,
+	enabled = false,
 }
 
 function M.setup(opts)
