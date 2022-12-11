@@ -20,7 +20,7 @@ See `:help keep-it-secret.nvim`
 Below is a sample setup with the default configs. If you do not wish to change the default configs, not setup call is required
 
 ```lua
-use("roberte777/keep-it-secret.nvimli", {
+use("roberte777/keep-it-secret.nvim", {
 	config = function()
 		require("keep-it-secret").setup({
 			wildcards = { ".*(.env)$", ".*(.secret)$" },
