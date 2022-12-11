@@ -1,38 +1,38 @@
-local M = {}
-local enabled = true
-function M.test()
-	print("test")
+local M = {
+	wildcards = { ".*.env", ".*.secret" },
+	enabled = true,
+}
+
+function M.setup(opts)
+	opts = opts or {}
+	M.wildcards = opts.wildcards or M.wildcards
+	M.enabled = opts.enabled or M.enabled
 end
 
 function M.toggle()
-	enabled = not enabled
+	M.enabled = not M.enabled
 end
 
 function M.show_warning_if_needed()
-	if not enabled then
+	if not M.enabled then
 		return
 	end
 
-	local wildcards = { ".*.env", ".*.secret" }
 	local filename = vim.fn.expand("%:t")
 
 	-- Check if the filename matches any of the configured wildcards
-	for _, wildcard in ipairs(wildcards) do
+	for _, wildcard in ipairs(M.wildcards) do
 		if string.match(filename, wildcard) then
-			-- Show the warning message
-			local answer = vim.fn.input(
-				"Warning! You are about to show a file that could contain secrets. Would you like to continue? [y/n]"
+			local choice = vim.fn.confirm(
+				"Warning! You are about to show a file that could contain secrets. Would you like to continue?",
+				"&Yes\n&No"
 			)
-			if answer:lower() ~= "y" then -- if the user doesn't want to open the file, close the buffer
+			if choice == 2 then
 				vim.api.nvim_command("bd")
 			end
 			break
 		end
 	end
-end
-
-function M.is_enabled()
-	print(enabled)
 end
 
 return M
