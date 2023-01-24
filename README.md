@@ -28,6 +28,10 @@ use("roberte777/keep-it-secret.nvim")
 Below is a sample setup with the default configs. If you do not wish to change the default configs, no setup call is required.
 Additionally, the wildcards are lua's wildcard syntax, not regex!
 
+The below setup will cause the plugin to show a popup for files that end explicitly in .env and .secret. This means files like .env.local, etc. are not triggered with this config. 
+
+Additioanlly, enabled = false sets the default enabled value. This value can be toggled, and does not have to be changed from here in order to enable the plugin. View below to see how to set a keybinding to change the enabled value. 
+
 ```lua
 require("keep-it-secret").setup({
 	wildcards = { ".*(.env)$", ".*(.secret)$" },
