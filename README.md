@@ -30,7 +30,7 @@ Additionally, the wildcards are lua's wildcard syntax, not regex!
 
 The below setup will cause the plugin to show a popup for files that end explicitly in .env and .secret. This means files like .env.local, etc. are not triggered with this config. 
 
-Additioanlly, enabled = false sets the default enabled value. This value can be toggled, and does not have to be changed from here in order to enable the plugin. View below to see how to set a keybinding to change the enabled value. 
+Additioanlly, enabled = false sets the initial enabled value. This value can be toggled, and does not have to be changed from here in order to enable the plugin. View below to see how to set a keybinding to change the enabled value. And remember, the plugin remembers if you enabled it or not, even between sessions!
 
 ```lua
 require("keep-it-secret").setup({
