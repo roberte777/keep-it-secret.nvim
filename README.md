@@ -25,7 +25,8 @@ use("roberte777/keep-it-secret.nvim")
 ```
 
 ## Setup
-Below is a sample setup with the default configs. If you do not wish to change the default configs, not setup call is required
+Below is a sample setup with the default configs. If you do not wish to change the default configs, no setup call is required.
+Additionally, the wildcards are lua's wildcard syntax, not regex!
 
 ```lua
 require("keep-it-secret").setup({
